@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-blog';
+
+
+
+  posts = [
+    {
+      title : "first post",
+      content : "this is my first post. Do you love It? <3",
+      loveIts: 5,
+      created_at: "01/01/2019"
+    },
+    {
+      title : "second post",
+      content : "this is my second post. Do you love It? <3",
+      loveIts: -1,
+      created_at: "03/01/2019"
+    }
+  ];
 }
