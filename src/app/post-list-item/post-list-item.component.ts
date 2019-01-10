@@ -6,6 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./post-list-item.component.scss']
 })
 export class PostListItemComponent implements OnInit {
+  
+  //loveIts: number = 0;
 
   @Input() title : string;
   @Input() content : string;
@@ -17,15 +19,16 @@ export class PostListItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  increment(){
+  increment(loveIts : number){
     this.loveIts = this.loveIts + 1;
     console.log(this.loveIts);
+    return this.loveIts;
   }
 
-  decrement(){
+  decrement(loveIts : number){
     this.loveIts = this.loveIts - 1;
     console.log(this.loveIts);
-
+    return this.loveIts;
   }
 
 }

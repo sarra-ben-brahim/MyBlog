@@ -1,10 +1,13 @@
-<ul class="list-group">
-    <h2> {{title}} </h2>
-    <br>
-    <h4> {{content}} </h4>
-  
-  </ul>
+<li [ngClass]="{'list-group-item': true, 'list-group-item-success': (increment(loveIts)), 'list-group-item-danger': !(increment(loveIts))}">
+    <div>
+        <h6 style="float:right; font-style: italic; color:grey"> {{created_at | date:'medium' }} </h6>  
+        <h4 style="float:left"> {{title}} </h4>
+    </div>
+    <h6> {{content}} </h6>
+    
 
-  
-<button type="button" class="btn btn-success" (click) = "increment()" >Love It!</button>
-<button type="button" class="btn btn-danger" (click) = "decrement()" >Don't love It!</button>
+<div>  
+<button type="button" class="btn btn-success" (click) = "increment(loveIts)" >Love It!</button>
+<button type="button" class="btn btn-danger" (click) = "decrement(loveIts)" >Don't love It!</button>
+</div>
+</li>
