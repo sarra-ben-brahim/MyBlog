@@ -29,5 +29,12 @@ export class AppComponent {
       loveIts: -2,
       created_at: "05/01/2019"
     }
+    ,
+    {
+      title : "fourth post",
+      content : "this is my fourth post. Do you love It? <3",
+      loveIts: 0,
+      created_at: "08/01/2019"
+    }
   ];
 }

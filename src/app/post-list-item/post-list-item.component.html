@@ -1,10 +1,12 @@
-<li [ngClass]="{'list-group-item': true}">
-  <!--, 'list-group-item-success': increment(loveIts), 'list-group-item-danger': increment(loveIts)-->
+<li [ngClass]="{'list-group-item': true, 'list-group-item-success': loveIts > 0, 'list-group-item-danger': loveIts < 0}">
     <div>
         <h6 style="float:right; font-style: italic; color:grey"> {{created_at | date:'medium' }} </h6>  
         <h4 style="float:left"> {{title}} </h4>
+        <br>
+        <br>
+        <p> {{content}} </p>
     </div>
-    <h6> {{content}} </h6>
+    
     
 
 <div>  
